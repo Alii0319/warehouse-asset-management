@@ -12,7 +12,24 @@ A full-stack warehouse asset management app built with **Django + DRF** (backend
 ```bash
 cd backend
 python3 -m venv .venv
-source .venv/bin/activate
+```
+
+Activate virtual environment:
+- **Linux / macOS:**
+  ```bash
+  source .venv/bin/activate
+  ```
+- **Windows (Command Prompt):**
+  ```cmd
+  .venv\Scripts\activate.bat
+  ```
+- **Windows (PowerShell):**
+  ```powershell
+  .venv\Scripts\Activate.ps1
+  ```
+
+Install dependencies, configure env, migrate, and start server:
+```bash
 pip install -r requirements.txt
 cp .env.example .env
 python manage.py migrate
@@ -30,9 +47,10 @@ npm run dev -- --host 0.0.0.0
 Open `http://localhost:5173` in your browser.
 
 ## Run Tests
+With the virtual environment activated:
 ```bash
 cd backend
-.venv/bin/python manage.py test -v 2
+python manage.py test -v 2
 ```
 
 ## Warehouse LAN Access
